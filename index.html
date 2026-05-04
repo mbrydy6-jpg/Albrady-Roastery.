@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Roastery Albrady | محمصة البريدي</title>
+    <title> Albrady Roastery| محمصة البريدي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -123,11 +123,13 @@
             color: #999;
             cursor: pointer;
         }
+        /* شبكة 3 أعمدة مرنة مع تمرير أفقي في الشاشات الضيقة */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
             gap: 32px;
             padding: 45px 35px;
+            overflow-x: auto;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -149,6 +151,7 @@
             box-shadow: 0 12px 20px rgba(0,0,0,0.1);
             border: 1px solid rgba(212, 175, 55, 0.5);
             position: relative;
+            min-width: 0; /* يسمح بالانضغاط ضمن الشبكة */
         }
         .product-item:hover { transform: translateY(-8px); box-shadow: 0 20px 28px rgba(0,0,0,0.2); background: white; }
         .product-item img { width: 100%; height: 220px; object-fit: cover; }
@@ -292,6 +295,9 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .stepper-btn:hover {
             background: #e6b422;
@@ -393,7 +399,7 @@
         footer { text-align: center; padding: 25px; background: var(--deep-brown); color: var(--gold-leaf); }
         @media (max-width:600px) { 
             .cart-sidebar { width: 100%; left: -100%; }
-            .products-grid { padding: 25px 15px; }
+            .products-grid { padding: 25px 15px; gap: 20px; }
             .modal-content { padding: 25px 20px; border-radius: 60px; }
             .stepper-btn { width: 50px; height: 50px; font-size: 1.2rem; }
             .quantity-input { width: 110px; font-size: 1.2rem; }
@@ -402,10 +408,10 @@
 </head>
 <body>
 
-<header>
-    <h1 class="logo-title">Roastery_Albrady</h1>
+    <header>
+    <h1 class="logo-title">Albrady Roastery</h1>
     <div class="highlight-desc">
-        <p class="description">نحن مختصون بتحميص أجود أنواع الموالح والمكسرات منذ أكثر من ٣٠ سنة</p>
+        <p class="description">نحن مختصون بتحميص أجود أنواع الموالح والمكسرات منذ أكثر من 30 سنة</p>
     </div>
 </header>
 
@@ -413,13 +419,12 @@
     <button class="nav-btn active" data-tab="mwalh">الموالح</button>
     <button class="nav-btn" data-tab="nuts">المكسرات</button>
     <button class="nav-btn" data-tab="coffee">القهوة</button>
-    <b5utton class="nav-btn" data-tab="host">الضيافة</b5utton>
+    <button class="nav-btn" data-tab="host">الضيافة</button>
     <button class="nav-btn" data-tab="special">أشياء أخرى مميزة</button>
     <button class="nav-btn" data-tab="dates">التمور</button>
     <button class="nav-btn" data-tab="biscuit">البسكويت</button>
     <button class="nav-btn" data-tab="chips">الشيبس</button>
-     <button class="nav-btn" data-tab="canned">معلبات</button>
-
+    <button class="nav-btn" data-tab="canned">معلبات</button>
 </nav>
 
 <div class="search-section">
@@ -435,7 +440,7 @@
 
 <div class="contact-float">
     <a href="https://wa.me/963938105355" class="icon-link wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com/roastery_albrady" class="icon-link ig" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://instagram.com/roastery_albrady Roastery" class="icon-link ig" target="_blank"><i class="fab fa-instagram"></i></a>
     <div class="icon-link cart-float-icon" id="openCartFloating">
         <i class="fas fa-shopping-basket"></i>
         <span class="cart-badge" id="cartBadge">0</span>
@@ -481,7 +486,7 @@
 </div>
 
 <footer>
-    <p>جميع الحقوق محفوظة لمحمصة البريدي © 2026</p>
+    <p>جميع الحقوق محفوظة لمحمصة البريدي ©️ 2026</p>
 </footer>
 
 <script>
@@ -503,7 +508,7 @@
             { name: "بزر دوار مدخن", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "بزر دوار مغبر", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "بزر دوار حلو", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "بزر دوار نيء", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "بزر دوار نيء", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
 
             { name: "بزر مصري", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "بزر مصري مدخن", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -531,7 +536,7 @@
             { name: "فستق حلبي عجمي", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "لوز امريكي", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "مكسرات مشكلة اكسترا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "بندق محمص", price: 0, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: false },
+            { name: "بندق محمص", price: 0, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: false },
             { name: "مكدميا محمصة بلا قشر", price: 4000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "مكدميا محمصة بالقشر", price: 1000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جوز بيكان برازيلي", price: 1250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -549,20 +554,16 @@
             { name: "قهوة حلوة بلا هيل", price: 1600, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "قهوة مرة البريدي", price: 350, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "قهوة مرة الحموي", price: 300, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-           { name: "قهوة سعودية ", price: 3000, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: "قهوة  باجة بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-             { name: "قهوة  باجة معتدلة", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-
-           { name: "قهوة  باجة بالزعفران", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-       
-           { name: "قهوة  كيف المسافر بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-           { name: "قهوة  كيف المسافر بالزعفران", price: 250, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-           { name: "قهوة  فرنسية  ", price: 750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-
+            { name: "قهوة سعودية ", price: 3000, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "قهوة  باجة بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  باجة معتدلة", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  باجة بالزعفران", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  كيف المسافر بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  كيف المسافر بالزعفران", price: 250, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  فرنسية  ", price: 750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "قهوة اسبريسو", price: 1800, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true }
         ],
         host: [
-          
             { name: "شوكولا غيفت سادة حلوة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت سادة مرة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت مكسرات حلوة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -571,35 +572,26 @@
             { name: "شوكولا غيفت اوريو", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت تشيز كيك", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت محشية", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "شوكولا غيفت كروكان", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-
-             { name: "  راحة ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "  راحة", راحةprice: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: " راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-
-
-              { name: " علاكة اوفال  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة ديفا محشي  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة ديفا سادة  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة ديفا شوكولا  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة اوفال  شوكولا ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة اوفال زبدة ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " ملبس ديفا مشكل  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " علاكة روشن حلا البقر  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-              { name: " ملبس روشن مشكل  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-
-           
-
-
-
+            { name: "شوكولا غيفت كروكان", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة اوفال  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة ديفا محشي  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة ديفا سادة  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة ديفا شوكولا  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة اوفال  شوكولا ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة اوفال زبدة ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " ملبس ديفا مشكل  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة روشن حلا البقر  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " ملبس روشن مشكل  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
         ],
         special: [
-           
             { name: "جيليبون مشكل", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -608,34 +600,13 @@
             { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-
             { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-                        { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه مالتيزر حليب", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه مالتيزر شوكولا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه كروكان حلوة", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-             { name: "شوكولا دراجيه كروكان مرة", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-
+            { name: "شوكولا دراجيه كروكان مرة", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه بالتمر والشوكولا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه بالتمر والكراميل", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "شوكولا دراجيه ", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-
             { name: "فواكه مجففة بالتبريد مغطسة بالشوكولا مشكلة", price: 3500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "فواكه مجففة فريز", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "فواكه مجففة منجا اصفر", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -643,10 +614,6 @@
             { name: "فواكه مجففة توت", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "فواكه مجففة كيوي", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "فواكه مجففة زنجبيل", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة ", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-
         ],
         dates: [
             { name: "كرتونة رطب سكري", price: 1350, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
@@ -655,88 +622,31 @@
             { name: "كرتونة تمر عنبر", price: 2600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "كرتونة تمر خضري", price: 1000, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "كرتونة تمر سري", price: 800, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-
-          
             { name: " تمر صقعي", price: 600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " تمر صفاوي", price: 600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " تمر عنبر", price: 900, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " تمر مجدول", price: 900, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " تمر سري", price: 400, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "  رطب سكري", price: 500, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            
-
+            { name: "  رطب سكري", price: 500, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }, 
         ],
         biscuit: [
             { name: " بريكستا ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-                      { name: " بريك سوبا ", price: 350, image: "data:image/jpeg;base64,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", unit: "قطعة", available: true },
-
             { name: " هابي بريك ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " بريك 4 اصابع", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " بريك 2 اصبع", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " بريك مربعة ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-
-
-
-
-
-
-
             { name: "دلكت بالشوكولا و الحليب", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "دلكت  بندق", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "دلكت بالشوكولا داكنة", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "فيوري", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "فيوري بالعسل", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-        
             { name: "يونكرز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-        
             { name: "لافيتا بريما حليب", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "لافيتا بريما شوكولا", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "لافيتا بريما فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "روبي شوكولا", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "روبي بندق", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "روبي حليب ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-           
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ كرز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ توت", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 216غ شوكولا", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 216غ بتدق", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 216غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 127غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 127غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 127غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 72غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لوفيتا 135غ فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-
-
-
-
             ...["رولانا جوز هند", "رولانا شوكولا", "رولانا بندق"].map(name => ({ name, price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
             { name: "رولانا فرط مشكل", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "بسكوت مشكل", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }
@@ -747,8 +657,7 @@
             ...Array(4).fill().map((_, i) => ({ name: `شيبس لاند ${i+1}`, price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
             ...Array(10).fill().map((_, i) => ({ name: `شيبس شاهين ${i+1}`, price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true }))
         ],
-
-canned:[
+        canned:[
             { name: " فواكه مجففة 340غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "  صحن فواكه مجففة 200غ ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "  صحن فواكه مجففة 300غ ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
@@ -759,26 +668,16 @@ canned:[
             { name: " صحن دراجيه 200غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " صحن دراجيه 300غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " صحن دراجيه 400غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-
-
-
-
-]
-
-
+        ]
     };
 
-    // --------------------------------------------------------------
-    // توحيد جميع المنتجات في مصفوفة واحدة للبحث العام
-    // --------------------------------------------------------------
+    // توحيد جميع المنتجات للبحث العام
     let allProducts = [];
     for (let category in productsDB) {
         allProducts = allProducts.concat(productsDB[category]);
     }
 
-    // --------------------------------------------------------------
-    // دوال خاصة بالصوت (Web Audio API)
-    // --------------------------------------------------------------
+    // دوال الصوت
     function playAddSound() {
         try {
             const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -786,22 +685,17 @@ canned:[
             const gainNode = audioCtx.createGain();
             oscillator.connect(gainNode);
             gainNode.connect(audioCtx.destination);
-            oscillator.frequency.value = 880; // نغمة عالية
+            oscillator.frequency.value = 880;
             gainNode.gain.value = 0.3;
             oscillator.type = 'sine';
             oscillator.start();
             gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.5);
             oscillator.stop(audioCtx.currentTime + 0.5);
-            // استئناف السياق إذا كان معلقاً على بعض المتصفحات
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
+            if (audioCtx.state === 'suspended') audioCtx.resume();
         } catch(e) { console.log("Audio error", e); }
     }
 
-    // --------------------------------------------------------------
-    // باقي دوال السلة والطلب والموقع
-    // --------------------------------------------------------------
+    // باقي الدوال (السلة، الطلب، إلخ) – نفس الكود السابق مع تعديل فتح الكيبورد تلقائياً
     let cart = [];
     let currentTab = 'mwalh';
     let searchKeyword = '';
@@ -833,7 +727,6 @@ canned:[
         setTimeout(() => toast.remove(), 2600);
     }
 
-    // رسالة نجاح الطلب بدون صوت
     function showSuccessMessage() {
         const modalDiv = document.createElement('div');
         modalDiv.className = 'success-modal';
@@ -920,6 +813,7 @@ canned:[
         renderCartUI();
     }
 
+    // دالة مودال الكمية مع فتح الكيبورد تلقائياً (إزالة readOnly وجلب التركيز)
     function openQuantityModal(product, unitType) {
         currentModalProduct = product;
         currentUnit = unitType;
@@ -927,41 +821,33 @@ canned:[
         const qtyInput = document.getElementById('quantityInput');
         const decBtn = document.getElementById('decQtyBtn');
         const incBtn = document.getElementById('incQtyBtn');
-        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        // جعل الحقل قابل للتحرير فوراً وفتح الكيبورد
+        qtyInput.readOnly = false;
+        qtyInput.style.backgroundColor = "white";
+        qtyInput.placeholder = "";
         if (unitType === "كيلو") {
             qtyInput.value = "0.5";
             qtyInput.step = "0.01";
             qtyInput.min = "0.05";
-            if (isMobile) {
-                qtyInput.readOnly = true;
-                qtyInput.style.backgroundColor = "#f5f5f5";
-                qtyInput.placeholder = "اضغط للإدخال";
-                decBtn.style.display = "none";
-                incBtn.style.display = "none";
-                qtyInput.classList.add('wide');
-                qtyInput.onclick = function() { this.readOnly = false; this.focus(); this.placeholder = ""; };
-            } else {
-                qtyInput.readOnly = false;
-                decBtn.style.display = "flex";
-                incBtn.style.display = "flex";
-                qtyInput.classList.remove('wide');
-            }
+            decBtn.style.display = "flex";
+            incBtn.style.display = "flex";
+            qtyInput.classList.remove('wide');
+            qtyInput.onclick = null;
         } else {
             qtyInput.value = "1";
             qtyInput.step = "1";
             qtyInput.min = "1";
-            qtyInput.classList.add('wide');
             decBtn.style.display = "none";
             incBtn.style.display = "none";
-            if (isMobile) {
-                qtyInput.readOnly = true;
-                qtyInput.style.backgroundColor = "#f5f5f5";
-                qtyInput.placeholder = "اضغط للإدخال";
-                qtyInput.onclick = function() { this.readOnly = false; this.focus(); this.placeholder = ""; };
-            } else { qtyInput.readOnly = false; }
+            qtyInput.classList.add('wide');
             qtyInput.oninput = function() { let val = parseInt(this.value); if (isNaN(val) || val < 1) val = 1; this.value = val; };
         }
         document.getElementById('quantityModal').style.display = 'flex';
+        // التركيز لفتح الكيبورد (على الجوال)
+        setTimeout(() => {
+            qtyInput.focus();
+            qtyInput.select();
+        }, 100);
     }
 
     document.getElementById('incQtyBtn').onclick = () => {
@@ -995,7 +881,6 @@ canned:[
         saveCartWithExpiry();
         let qtyDisplay = (currentUnit === "كيلو") ? qty.toFixed(2) + " كيلو" : qty + " قطعة";
         showToast(`✨ تم إضافة ${qtyDisplay} من ${currentModalProduct.name}`);
-        // تشغيل الصوت عند إضافة المنتج
         playAddSound();
         document.getElementById('quantityModal').style.display = 'none';
         const qtyInput = document.getElementById('quantityInput');
@@ -1014,7 +899,7 @@ canned:[
         qtyInput.onclick = null; qtyInput.oninput = null; qtyInput.readOnly = false;
     }};
 
-    // وظيفة عرض المنتجات مع دعم البحث العام
+    // عرض المنتجات مع البحث العام
     function renderProducts() {
         const grid = document.getElementById('main-grid');
         let productsToShow = [];
@@ -1025,7 +910,6 @@ canned:[
             productsToShow = productsDB[currentTab] || [];
             isSearchActive = false;
         }
-        
         if (productsToShow.length === 0) {
             grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px;">🔍 لا توجد منتجات مطابقة</div>';
             return;
@@ -1100,8 +984,7 @@ canned:[
     document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartSidebar').classList.remove('open'));
     document.getElementById('clearCartBtn').addEventListener('click', clearFullCart);
 
-    // Google Sheets معطل
-    function sendToGoogleSheets(data) { }
+    function sendToGoogleSheets(data) { } // معطل
 
     document.getElementById('sendOrderBtn').addEventListener('click', () => {
         let customer = document.getElementById('customerName').value.trim();

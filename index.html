@@ -404,6 +404,10 @@
             .stepper-btn { width: 50px; height: 50px; font-size: 1.2rem; }
             .quantity-input { width: 110px; font-size: 1.2rem; }
         }
+        /* إخفاء الأيقونات العائمة عند فتح السلة */
+.contact-float.hide {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -979,9 +983,19 @@
             document.getElementById('main-grid').setAttribute('data-cat', currentTab);
         }
     }
+   
     document.getElementById('searchToggleBtn').addEventListener('click', openSearch);
-    document.getElementById('openCartFloating').addEventListener('click', () => document.getElementById('cartSidebar').classList.add('open'));
-    document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartSidebar').classList.remove('open'));
+   const cartSidebar = document.getElementById('cartSidebar');
+const floatIcons = document.querySelector('.contact-float');
+
+document.getElementById('openCartFloating').addEventListener('click', () => {
+    cartSidebar.classList.add('open');
+    if (floatIcons) floatIcons.classList.add('hide');
+});
+document.getElementById('closeCartBtn').addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+    if (floatIcons) floatIcons.classList.remove('hide');
+});
     document.getElementById('clearCartBtn').addEventListener('click', clearFullCart);
 
     function sendToGoogleSheets(data) { } // معطل

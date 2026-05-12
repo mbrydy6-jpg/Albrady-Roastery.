@@ -424,11 +424,14 @@
     <button class="nav-btn" data-tab="nuts">المكسرات</button>
     <button class="nav-btn" data-tab="coffee">القهوة</button>
     <button class="nav-btn" data-tab="host">الضيافة</button>
-    <button class="nav-btn" data-tab="special">أشياء أخرى مميزة</button>
+    <button class="nav-btn" data-tab="special">  زبيب</button>
     <button class="nav-btn" data-tab="dates">التمور</button>
     <button class="nav-btn" data-tab="biscuit">البسكويت</button>
     <button class="nav-btn" data-tab="chips">الشيبس</button>
     <button class="nav-btn" data-tab="canned">معلبات</button>
+        <button class="nav-btn" data-tab="nuts2">مكسرات نيئة </button>
+        <button class="nav-btn" data-tab="sweet"> الحلويات  </button>
+
 </nav>
 
 <div class="search-section">
@@ -499,82 +502,162 @@
     // --------------------------------------------------------------
     const productsDB = {
         mwalh: [
-            { name: "بزر احمر مدخن", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر اسود بلدي", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر قرع", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "  بزر قرع نيء", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "بزر احمر مدخن", price: 600, image: "https://i.postimg.cc/qMKhd89Q/ayrany.jpg", unit: "كيلو", available: true },
+            { name: "بزر اسود بلدي", price: 500, image: "https://i.postimg.cc/htqJ4XBk/aswd.jpg", unit: "كيلو", available: true },
+            { name: "بزر قرع", price: 700, image: "https://i.postimg.cc/Pq5mWSqx/qrʿ.jpg", unit: "كيلو", available: true },
+                      { name: "بزر قرع مدخن", price: 800, image: "https://i.postimg.cc/ZK6F49gy/qrʿ-mdhn.jpg", unit: "كيلو", available: true },
+
+            { name: "  بزر قرع نيء", price: 700, image: "https://p.globalsources.com/IMAGES/PDT/B1222337844/raw-pumpkin-seeds.jpg?ver=6091727492", unit: "كيلو", available: true },
 
             { name: "بزر قرع مشوي", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر لسان الطير", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر قرع مدخن", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر لسان الطير مدخن", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر دوار", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر دوار مدخن", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر دوار مغبر", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر دوار حلو", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر دوار نيء", price: 460, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "بزر لسان الطير", price: 700, image: "https://i.postimg.cc/xdpLtLkx/kwsa.jpg", unit: "كيلو", available: true },
+            { name: "بزر لسان الطير مدخن", price: 800, image: "https://i.postimg.cc/13P0tmhj/kwsa-mdhn.jpg", unit: "كيلو", available: true },
+            { name: "بزر دوار", price: 460, image: "https://i.postimg.cc/wBMmy3W4/dwar.jpg", unit: "كيلو", available: true },
+            { name: "بزر دوار مدخن", price: 500, image: "https://i.postimg.cc/9FS55n6G/dwar-mdkhnn.jpg", unit: "كيلو", available: true },
+            { name: "بزر دوار مغبر", price: 460, image: "", unit: "كيلو", available: true },
+            { name: "بزر دوار حلو", price: 460, image: "", unit: "كيلو", available: true },
+            { name: "بزر دوار نيء", price: 460, image: "", unit: "كيلو", available: true },
 
-            { name: "بزر مصري", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بزر مصري مدخن", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق مالح", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق مدخن", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق حامض", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق بقشر", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق نيء", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "بزر مصري", price: 400, image: "https://i.postimg.cc/m2413mXY/msry.jpg", unit: "كيلو", available: true },
+            { name: "بزر مصري مدخن", price: 400, image: "https://i.postimg.cc/pLFDqmQv/msry-mdkhn.jpg", unit: "كيلو", available: true },
+            { name: "فستق مالح", price: 600, image: "https://i.postimg.cc/LhFssbrV/malh.jpg", unit: "كيلو", available: true },
+            { name: "فستق مدخن", price: 600, image: "https://i.postimg.cc/nVg0HfLH/mdkhn.jpg", unit: "كيلو", available: true },
+            { name: "فستق حامض", price: 600, image: "", unit: "كيلو", available: true },
+          
+            { name: "فستق بقشر", price: 600, image: "https://i.postimg.cc/sg9c9B4F/bqshr.jpg", unit: "كيلو", available: true },
+                      { name: "فستق مكرمل بسمسم", price: 500, image: "", unit: "كيلو", available: true },
+                      { name: "فستق مكرمل بلا سمسم", price: 500, image: "", unit: "كيلو", available: true },
 
-            { name: "طابات سبايسي ملونة", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "طابات سبايسي ملونة صغيرة", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "طوكيو ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "فستق نيء", price: 500, image: "", unit: "كيلو", available: true },
 
-            { name: "فستق كريسبي", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "كناكر حلوة", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "كناكر مدخنة", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "قضامة صفرا", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "قضامة مالحة", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "قضامة مشوي", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "قضامة سكرية", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "قضامة مدخنة", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }
+            { name: "طابات سبايسي ملونة", price: 600, image: "https://i.postimg.cc/bvbfy9QV/Whats-App-Image-2026-05-11-at-7-05-20-PM.jpg", unit: "كيلو", available: true },
+            { name: "طابات سبايسي ملونة صغيرة", price: 600, image: "https://i.postimg.cc/85RF6WVw/Whats-App-Image-2026-05-11-at-7-06-33-PM-(1).jpg", unit: "كيلو", available: true },
+            { name: "طوكيو ", price: 600, image: "https://i.postimg.cc/FssfY7Cb/Whats-App-Image-2026-05-11-at-7-06-33-PM.jpg", unit: "كيلو", available: true },
+
+            { name: "فستق كريسبي", price: 800, image: "https://i.postimg.cc/HLGs9x3s/Whats-App-Image-2026-05-11-at-7-17-48-PM.jpg", unit: "كيلو", available: true },
+            { name: "كناكر حلوة", price: 600, image: "https://i.postimg.cc/sDvjFSNz/Whats-App-Image-2026-05-11-at-7-17-49-PM.jpg", unit: "كيلو", available: true },
+            { name: "كناكر مدخنة", price: 600, image: "https://i.postimg.cc/sDF6yCn9/Whats-App-Image-2026-05-11-at-7-06-32-PM.jpg", unit: "كيلو", available: true },
+            { name: "قضامة صفرا", price: 500, image: "https://i.postimg.cc/4xjn2w4T/Whats-App-Image-2026-05-11-at-7-06-34-PM.jpg", unit: "كيلو", available: true },
+            { name: "قضامة مالحة", price: 500, image: "https://i.postimg.cc/h4MWtjd4/Whats-App-Image-2026-05-11-at-7-05-23-PM.jpg", unit: "كيلو", available: true },
+            { name: "قضامة مشوية", price: 400, image: "", unit: "كيلو", available: true },
+            { name: "قضامة سكرية", price: 500, image: "https://i.postimg.cc/4dfGWh9F/Whats-App-Image-2026-05-11-at-7-17-51-PM.jpg", unit: "كيلو", available: true },
+            { name: "قضامة مدخنة", price: 600, image: "", unit: "كيلو", available: true }
         ],
         nuts: [
-            { name: "كاجو جامبو", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فستق حلبي عجمي", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "لوز امريكي", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+           
+        { name: "كاجو جامبو", price: 1800, image: "https://i.postimg.cc/76p0yDn0/kajw.jpg", unit: "كيلو", available: true },
+                      { name: "كاجو حبة صغيرة", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "كاجو كسر", price: 1100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+        { name: "فستق حلبي عجمي", price: 1800, image: "https://i.postimg.cc/767b0zS6/hlby.jpg", unit: "كيلو", available: true },
+            { name: "لوز امريكي", price: 1800, image: "https://i.postimg.cc/J0ZJrgT4/lwz.jpg", unit: "كيلو", available: true },
             { name: "مكسرات مشكلة اكسترا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "بندق محمص", price: 0, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: false },
             { name: "مكدميا محمصة بلا قشر", price: 4000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "مكدميا محمصة بالقشر", price: 1000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جوز بيكان برازيلي", price: 1250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "جوز بيكان برازيلي بالقشر", price: 1250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جوز بيكان برازيلي بلا قشر", price: 4000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "كيس مكدميا", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "جوز بالقشر بلدي", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: "كيس بيكان", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+                   { name: "جوز بالقشر تشيلي", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                      { name: "جوز بالقشر بلدي", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "جوز صيني بلا قشر", price: 1000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "لوز فريك امريكي محمص", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "لوز فريك بلدي محمص", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "لوز فريك امريكي نيء", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "لوز فريك بلدي نيء", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }
         ],
+nuts2:[
+            { name: "كاجو نيء   ", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "   كاجو فلقة نيء  ", price: 1200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "   لوز صنوبري نيء ", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+         
+            { name: "  لوز فلقة نيء", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                     { name: "   لوز مبشور نيء ", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "لوز امريكي نيء", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+            
+            { name: " صنوبر نيء", price: 6000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                       { name: "   كشمش   ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+            { name: "فستق حلبي حب   ", price: 3000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "فستق حلبي مبشور   ", price: 3000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+            { name: "  لب قرع   ", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+
+]
+,
+sweet:[
+                            { name:"  تين مدعبل ", price: 1200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+                        { name:" تين مدعبل مطحن ", price: 1200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+                        { name:" تين نجمة ", price: 1400, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+                        { name:" تين نجمة مطحن ", price: 1400, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+            { name: "   فال  ", price: 600, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "   كستناء شام الاصل ", price: 250, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+
+                        { name:"راحة تركية اصابع", price: 1600, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+                        { name:"راحة تركية رول", price: 1600, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: true },
+                        { name:"راحة تركية مخدات", price: 1600, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+                        { name:"  بوشار", price: 200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "كيلو", available: false },
+
+            { name: "فستق حلبي حب   ", price: 3000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "فستق حلبي مبشور   ", price: 3000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "     جوز هند كامل الدسم ", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                        { name: "بسكوت جوز هند", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "بسكوت  بعجوة", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "اقراص بالسمن العربي  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "الفخاري", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "  شغليل قطع  ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "  شغليل صبة  ", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                      
+                                                { name: "  غزلة  ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "  راحة تاكت كبير   ", price: 120, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "  راحة تاكت صغير   ", price: 60, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   كيس بسكوت سادة   ", price: 10, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+                        { name: "  سمكة الزين   ", price: 70, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   ملبس قلوب احمر  ", price: 70, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   حجار البحر ", price: 70, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   ملبس قباقيب ", price: 70, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "    مارشميلو 170غ", price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+  
+],
+
         coffee: [
+                        { name: "متة بيبوري 250غ  ", price: 150, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+
             { name: "قهوة حلوة بالهيل", price: 1800, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "قهوة حلوة بلا هيل", price: 1600, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "قهوة مرة البريدي", price: 350, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "قهوة مرة الحموي", price: 300, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة مرة الحموي", price: 300, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Fq0rJwReZFS2zbLzOLU9kNQvmzlRM5fOEA&s", unit: "قطعة", available: true },
             { name: "قهوة سعودية ", price: 3000, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "قهوة  باجة بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "قهوة  باجة معتدلة", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "قهوة  باجة بالزعفران", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "قهوة  كيف المسافر بالهيل", price: 200, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "قهوة  كيف المسافر بالزعفران", price: 250, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  كيف المسافر بالهيل", price: 250, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "قهوة  كيف المسافر بالزعفران", price: 300, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "قهوة  فرنسية  ", price: 750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "قهوة اسبريسو", price: 1800, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true }
+            { name: "قهوة اسبريسو", price: 1800, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                        { name: "هيل هندي ", price: 8000, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " شاي كرك موز", price: 50, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "شاي كرك دراق", price: 50, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "شاي كرك منجا", price: 50, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "قطعة", available: true },
+
+
         ],
         host: [
-
-            { name: "frozen 200g cream kunafa filling ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "قطعة", available: true },
-            { name: "frozen 200g mango ", price: 540, image: "https://bf1af2.akinoncloudcdn.com/products/2026/03/19/652682/a3f331d3-6969-4720-8d4d-fd4563fd388f_size3840_cropCenter.jpg", unit: "قطعة", available: true },
-            { name: "frozen 200g pistachio ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_5qvBT31-LAVUB0GJFiuDe62Fn9hzLL49w&s", unit: "قطعة", available: true },
-            { name: "frozen 200g milk ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzInhJYeJgWrxFvSf2-WN7I5fnfJvGemAxDw&s", unit: "قطعة", available: true },
-            { name: "frozen 200g tahini ", price: 540, image: "https://www.greensintl.com/_next/image?url=https%3A%2F%2Fgreensecombucket.s3.ap-south-1.amazonaws.com%2Fimages%2F893e8955-041e-4202-a9d1-d519f6909db0-175264.webp&w=3840&q=45", unit: "قطعة", available: true },
-            { name: "frozen 200g cheese cake ", price: 540, image: "https://www.greensintl.com/_next/image?url=https%3A%2F%2Fgreensecombucket.s3.ap-south-1.amazonaws.com%2Fimages%2F900e7d9b-d9dd-4820-a52e-4355562b1e64-175261.webp&w=3840&q=45", unit: "قطعة", available: true },
+            { name: "frozen 200g كنافةوكريمة    ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1-bLP098EDlYeWVajGUcGgBAv27H-avArg&s", unit: "قطعة", available: true },
+            { name: "frozen 200g منجا ", price: 540, image: "https://bf1af2.akinoncloudcdn.com/products/2026/03/19/652682/a3f331d3-6969-4720-8d4d-fd4563fd388f_size3840_cropCenter.jpg", unit: "قطعة", available: true },
+            { name: "frozen 200g بستاشيو ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_5qvBT31-LAVUB0GJFiuDe62Fn9hzLL49w&s", unit: "قطعة", available: true },
+            { name: "frozen 200g اوريو ", price: 540, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzInhJYeJgWrxFvSf2-WN7I5fnfJvGemAxDw&s", unit: "قطعة", available: true },
+            { name: "frozen 200g طحينية ", price: 540, image: "https://www.greensintl.com/_next/image?url=https%3A%2F%2Fgreensecombucket.s3.ap-south-1.amazonaws.com%2Fimages%2F893e8955-041e-4202-a9d1-d519f6909db0-175264.webp&w=3840&q=45", unit: "قطعة", available: true },
+            { name: "frozen 200g تشيز كيك  ", price: 540, image: "https://www.greensintl.com/_next/image?url=https%3A%2F%2Fgreensecombucket.s3.ap-south-1.amazonaws.com%2Fimages%2F900e7d9b-d9dd-4820-a52e-4355562b1e64-175261.webp&w=3840&q=45", unit: "قطعة", available: true },
             { name: "frozen 200g ", price: 540, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "frozen 200g ", price: 540, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
 
@@ -582,17 +665,27 @@
             { name: "iced fruit 300g ", price: 850, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "iced fruit 600g ", price: 1700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
 
-            { name: "diamond twist 180g pistachio ", price: 500, image: "https://m.media-amazon.com/images/I/61CrOXM+ZRL._SL1500_.jpg", unit: "قطعة", available: true },
-            { name: "diamond twist 180g milk chocolate ", price: 500, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQV_dWe-5cNtCYNB_uem4RQXRgGDPLWx9SA&s", unit: "قطعة", available: true },
-            { name: "diamond twist 180g bonnelo ", price: 500, image: "https://bf1af2.akinoncloudcdn.com/products/2025/10/08/382116/13daa164-9d0b-4328-bb2c-bcbbcce67ad5.jpg", unit: "قطعة", available: true },
+            { name: "diamond twist 180g بستاشيو ", price: 500, image: "https://m.media-amazon.com/images/I/61CrOXM+ZRL._SL1500_.jpg", unit: "قطعة", available: true },
+            { name: "diamond twist 180g حليب وشوكولا  ", price: 500, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQV_dWe-5cNtCYNB_uem4RQXRgGDPLWx9SA&s", unit: "قطعة", available: true },
+            { name: "diamond twist 180g بونيلو ", price: 500, image: "https://bf1af2.akinoncloudcdn.com/products/2025/10/08/382116/13daa164-9d0b-4328-bb2c-bcbbcce67ad5.jpg", unit: "قطعة", available: true },
             { name: "diamond twist 180g ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: "diamond twist 180g ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+         
+            { name: "lake twist 450g ", price: 1000, image: "https://www.amazon.ae/Choco-Lake-Twist-Milk-Chocolate/dp/B0D7HZV47Y", unit: "قطعة", available: true },
+            { name: "lake twist 450g ", price: 1000, image: "https://www.amazon.ae/Choco-Lake-Twist-Milk-Chocolate/dp/B0D7HZV47Y", unit: "قطعة", available: true },
+            { name: "lake twist 450g ", price: 1000, image: "https://www.amazon.ae/Choco-Lake-Twist-Milk-Chocolate/dp/B0D7HZV47Y", unit: "قطعة", available: true },
             { name: "lake twist 450g ", price: 1000, image: "https://www.amazon.ae/Choco-Lake-Twist-Milk-Chocolate/dp/B0D7HZV47Y", unit: "قطعة", available: true },
 
-            { name: "diamond twist 650g milk ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "diamond twist 650g ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "diamond twist 650g ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "diamond twist 650g ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "diamond twist 650g مشكلة ", price: 1400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "diamond twist 650g شوكولا", price: 1400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "diamond twist 650g بندق ", price: 1400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "diamond twist 650g بستاشيو ", price: 1400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+                        { name: "شوكولا اجنبي مارس ", price: 1700, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjoQ-qqe6egeznLW07FL6n6soSG97u5N2bbg&s", unit: "كيلو", available: true },
+                        { name: "شوكولا اجنبي تويكس ", price: 1700, image: "https://lh3.googleusercontent.com/proxy/7yUY5bor9dwxYAjJ4VQehgSaq6U2FP9UfpeRmoFkLzi8SeQ-8VBuruUPYpb1g6U3WCaYrej9gvZUabazCW4MO0uVNx9sGHjccoivUg6vbaOdJYR-qmf6yA", unit: "كيلو", available: true },
+                        { name: "شوكولا اجنبي باونتي ", price: 1700, image: "https://lh3.googleusercontent.com/proxy/8S2KsvaE9-yYmt_zf46qJTaxplhSWTWsu7-qOLIADcHjUIpCp4vTFjtEi1BmgygPbSW9KYG3MLSuhjB-EUbWNEk8G5QaX4Q-GwBlIOGmzftCwIfDzMUmrg", unit: "كيلو", available: true },
+                        { name: "شوكولا اجنبي سنكرز ", price: 1700, image: "https://cdn11.bigcommerce.com/s-jzmamplsrc/images/stencil/1500x1500/products/4544/9012/snickers-fun-size-chocolates-bars__54223.1746997203.jpg?c=1&imbypass=on", unit: "كيلو", available: true },
+                        { name: "شوكولا اجنبي مشكل ", price: 1700, image: "https://cdn.salla.sa/jGbEB/6aef8351-04a9-4dce-b1fc-379a0cecfb55-1000x1000-TgMJ0QzbCnPjoao51Np8I1QsrTNaGS24RPqaVZoe.jpg", unit: "كيلو", available: true },
 
 
 
@@ -605,10 +698,10 @@
             { name: "شوكولا غيفت تشيز كيك", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت محشية", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا غيفت كروكان", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "  راحة ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة عرايسية مدعومة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  راحة الفلك ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "  نوجا مدعومة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "  راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "راحة  ", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "  راحة", price: 1750, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
@@ -616,82 +709,181 @@
             { name: " علاكة اوفال  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " علاكة ديفا محشي  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " علاكة ديفا سادة  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " علاكة ديفا شوكولا  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " علاكة اوفال  شوكولا ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " علاكة اوفال زبدة ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " علاكة ديفا شوكولا  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            
+            { name: " علاكة ديفا نعنعة  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " ملبس ديفا مشكل  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+
+            { name: " علاكة اوفال   ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " علاكة روشن حلا البقر  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: " ملبس روشن مشكل  ", price: 700, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " باكو    ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "   قمر الدين  ", price: 500, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "   قمر الدين  فريز", price: 900, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1500&auto=format&fit=crop", unit: "كيلو", available: true },
 
                 { name: "جيليبون مشكل", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "جيليبون ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "شوكولا دراجيه", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+         
+            { name: "شوكولا دراجيه مشكل", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه مالتيزر حليب", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه مالتيزر شوكولا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه كروكان حلوة", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه كروكان مرة", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه بالتمر والشوكولا", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
             { name: "شوكولا دراجيه بالتمر والكراميل", price: 1800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            
             { name: "فواكه مجففة بالتبريد مغطسة بالشوكولا مشكلة", price: 3500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة فريز", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة منجا اصفر", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة منجا احمر", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة توت", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة كيوي", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "فواكه مجففة زنجبيل", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            
+           // { name: "فواكه مجففة فريز", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+           // { name: "فواكه مجففة منجا صفراء", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+        //    { name: "فواكه مجففة منجا حمراء", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+        //    { name: "فواكه مجففة توت", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+         //   { name: "فواكه مجففة كيوي", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+         //   { name: "فواكه مجففة زنجبيل", price: 1500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
 
 
         ],
         special: [
+                        { name: "زبيب مدعبل بلدي ", price: 500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                        { name: "زبيب دربلي بلدي ", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                        { name: "زبيب اسود امريكي ", price: 800, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                        { name: "زبيب اصفر امريكي ", price: 1000, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                        { name: " بربرين  ", price: 2500, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
         
         ],
         dates: [
-            { name: "كرتونة رطب سكري", price: 1350, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "كرتونة تمر صفاوي", price: 1600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "كرتونة تمر صقعي", price: 1600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "كرتونة تمر عنبر", price: 2600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "كرتونة تمر خضري", price: 1000, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "كرتونة تمر سري", price: 800, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " تمر صقعي", price: 600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " تمر صفاوي", price: 600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " تمر عنبر", price: 900, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " تمر مجدول", price: 900, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: " تمر سري", price: 400, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: "كرتونة رطب سكري", price: 1350, image: "https://m.media-amazon.com/images/I/71XSmxB5MsL._AC_UF894,1000_QL80_.jpg", unit: "قطعة", available: true },
+            { name: "كرتونة تمر صفاوي", price: 1600, image: "https://cdn.salla.sa/ePrvPO/749a718e-ecb2-4e3f-a5dd-bfbcd0c568c2-875.625x1000-E1e8Flvet3iq6HXmPsB4SK7UKt79V9XRmAQzNzb3.jpg", unit: "قطعة", available: true },
+            { name: "كرتونة تمر صقعي", price: 1600, image: "https://cdn.salla.sa/EBdRB/396b913f-5c00-42f7-91ca-00e5905be332-1000x1000-vnEfCBQBRYzn9LBtSbqlw1Xo5B5fYAtpDvPvDXRd.jpg", unit: "قطعة", available: true },
+            { name: "كرتونة تمر عنبر", price: 2600, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKS0H2_V_0KoC3MK8RRQAsK2UNtDFKu0uxYA&s", unit: "قطعة", available: true },
+            { name: "كرتونة تمر خضري", price: 1000, image: "https://cdn.salla.sa/lNnx/Sk1I8KLwnpE986afRV0JD7fYSzyPTAzZx6VhKGgA.png", unit: "قطعة", available: true },
+                     { name: "  كرتونة تمر مجدول", price: 0, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbv5yzyhjR25YLX6BY9_U6XdkNtbImS8yhxg&s", unit: "قطعة", available: false },
+
+           // { name: "كرتونة تمر سري", price: 800, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+               
             { name: "  رطب سكري", price: 500, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }, 
+            { name: " تمر صفاوي", price: 600, image: "https://cdn.salla.sa/qQxon/CsF7PYqDFIjecsMtXsyUqSenZ3xBXUl3UfKSjXjY.jpg", unit: "كيلو", available: true },
+
+            { name: " تمر صقعي", price: 600, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " تمر عنبر", price: 900, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKS0H2_V_0KoC3MK8RRQAsK2UNtDFKu0uxYA&s", unit: "كيلو", available: true },
+                       { name: " تمر خضري", price: 400, image: "https://cdn.salla.sa/lNnx/Sk1I8KLwnpE986afRV0JD7fYSzyPTAzZx6VhKGgA.png", unit: "كيلو", available: true },
+
+            { name: " تمر مجدول", price: 900, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReTspU5V4hSa8_FYdxP9lN5_B2OjHPg11-9w&s", unit: "كيلو", available: true },
+            //{ name: " تمر سري", price: 400, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                        { name: " تمر خلاص 500غ", price: 150, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: " عجوة مطحونة 1 كيلو ", price: 250, image: "https://images.unsplash.com/photo-1608744882201-5b2a4b4c9f5f?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+
+
+
         ],
         biscuit: [
-            { name: " بريكستا ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " هابي بريك ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " بريك 4 اصابع", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " بريك 2 اصبع", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " بريك مربعة ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "دلكت بالشوكولا و الحليب", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "دلكت  بندق", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "دلكت بالشوكولا داكنة", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "فيوري", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "فيوري بالعسل", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "يونكرز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لافيتا بريما حليب", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لافيتا بريما شوكولا", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "لافيتا بريما فريز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "روبي شوكولا", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "روبي بندق", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: "روبي حليب ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            ...["رولانا جوز هند", "رولانا شوكولا", "رولانا بندق"].map(name => ({ name, price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
-            { name: "رولانا فرط مشكل", price: 700, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
-            { name: "بسكوت مشكل", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true }
+           
+            { name: " بريكستا ", price: 350, image: "https://zalmout.com/cached_uploads/resize/1900/700/2022/03/05/92805110-1646493904.png.webp", unit: "قطعة", available: true },
+            { name: " بريك مربعة ", price: 350, image: "https://cdn.salla.sa/xPdma/qlSV4h0a6C2RmV2Wc3ivuI0oj3XUgUs6OawcTxdm.jpg", unit: "قطعة", available: true },
+                      { name: " بريك  سوبا ", price: 350, image: "https://cdn.salla.sa/BEabB/l0WfC5soQmphbUzItqtTHGRr8cJiqx1Ihc914SSD.jpg", unit: "قطعة", available: true },
+                      { name: " بريك  ديلايتس", price: 350, image: "https://media.mapp.sa/409688/1633692790_55A3D4B9-1F4F-4ADB-B47A-03F46D68B404.jpeg", unit: "قطعة", available: true },
+
+            { name: " هابي بريك ", price: 350, image: "https://media.zid.store/0893207e-68b3-48b7-bfef-3bfd4bdae765/b46f818f-6202-44e5-90cf-644f7f8a0cee.jpg", unit: "قطعة", available: true },
+          //  { name: " بريك 1 اصابع", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: " بريك 2 اصبع", price: 350, image: "https://media.zid.store/a0248980-74dc-4e3a-ac92-bb4c7bf6f589/e52d2dac-d884-473c-9450-053075983539.png", unit: "قطعة", available: true },
+            { name: " بريك 4 اصابع ", price: 350, image: "https://cdn.salla.sa/zvlWQP/83b499d9-fe6f-41e2-9b83-0c6b1ddca67a-1000x1000-3csI8MjCHK02SWo4gHj7YvsSqgqKPCnZBUwEXNww.jpg", unit: "قطعة", available: true },
+  
+            { name: "فيوري", price: 350, image: "https://media.zid.store/thumbs/a0248980-74dc-4e3a-ac92-bb4c7bf6f589/0ad3d9e1-5552-4960-a7d6-f3bc45397c7c-thumbnail-770x770-70.jpg", unit: "قطعة", available: true },
+            { name: "فيوري بالعسل", price: 350, image: "https://media.zid.store/thumbs/a0248980-74dc-4e3a-ac92-bb4c7bf6f589/f1e7e207-3d9c-4982-b280-f114ce2c4acc-thumbnail-1000x1000-70.jpg", unit: "قطعة", available: true },
+          
+                        { name: "يونكرز", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzy03Xx-WEJ-11oDfGteNWU9uPqWorRF1Gg&s", unit: "قطعة", available: true },
+
+            { name: "  برينسيس حليب صغير  ", price: 120, image: "https://caphore.sy/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-21-at-12.53.19-PM.jpeg", unit: "قطعة", available: true },
+            { name: "  برينسيس  شوكولا صغير ", price: 120, image: "https://i0.wp.com/magic-stores.com/wp-content/uploads/2021/08/%D8%A8%D8%B1%D9%86%D8%B3%D9%8A%D8%B3-6.png?fit=2048%2C2048&ssl=1", unit: "قطعة", available: true },
+
+         
+                      { name: "دلكت بالشوكولا  ", price: 350, image: "https://cloud.gs1jo.org.jo/2064/625380466209/625380466209_1.jpg?451", unit: "قطعة", available: true },
+            { name: "دلكت بالشوكولا داكنة", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbmnXNLdicapgyD2l2Lcnb3aT0HxuY3QcEPQ&s", unit: "قطعة", available: true },
+                               { name: "دلكت بالحليب  ", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOxfmGVO_1vwPP9vnLVckggehi_enLkX4V3Q&s", unit: "قطعة", available: true },
+                       //     { name: "كيكتي شوكولا", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                       // { name: "كيكتي فريز", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        //{ name: "كيكتي حليب وشوكولا", price: 400, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDI5lCPkoBOflQ1lyYTGZIxqd5JZ09CBHMg&s", unit: "قطعة", available: true },
+                      //  { name: "كيكتي فانيلا", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+
+
+            { name: "لافيتا بريما حليب", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWgVFm021aV72jMykAqeIeLfsU7YfOUan9cQ&s", unit: "قطعة", available: true },
+            { name: "لافيتا بريما شوكولا", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr7RsMT28dK_M4XbdkbP6oeUrQKn58mI_UIQ&s", unit: "قطعة", available: true },
+            { name: "لافيتا بريما فريز", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsOfMGrImyKzZd9Rr5ypwkBHwS2dgbyEDK8g&s", unit: "قطعة", available: true },
+            { name: "روبي شوكولا", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpIZKlfjRHJbcGkkb4zNteeiiH806dLoIKCw&s", unit: "قطعة", available: true },
+            { name: "روبي بندق", price: 350, image: "https://www.al-arabisch.de/wp-content/uploads/2023/11/%D8%A8%D8%B3%D9%83%D9%88%D9%8A%D8%AA-%D8%B1%D9%88%D8%A8%D9%8A-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D8%A8%D8%B4%D9%88%D9%83%D9%88%D9%84%D8%A7-%D8%A7%D9%84%D8%A8%D9%86%D8%AF%D9%821-11-03-2023.jpg", unit: "قطعة", available: true },
+            { name: "روبي حليب ", price: 350, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbOEoNQLAxD_By5hkMfRjsVdVBxFPftNGUtw&s", unit: "قطعة", available: true },
+            { name: "رولانا فرط مشكل", price: 700, image: "", unit: "كيلو", available: true },
+            { name: "بسكوت مشكل", price: 600, image: "", unit: "كيلو", available: true },
+
+            { name: " lovita 135g فريز", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " lovita 135g كرز", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " lovita 135g توت ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+            { name: " lovita 135g برتقال ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                      { name: " lovita 180g فريز ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " lovita 180g شوكولا  ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " lovita 180g بندق ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                      { name: " knafito 140g  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " knafito 140g  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " knafito 140g  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " knafito 140g  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+   
+                      { name: " krak to 190g شوكولا  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " krak to 190g بندق  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " krak to 190g حليب ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                      { name: " lovita 168 شوكولا  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " lovita 168 شوكولا  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+                      { name: " lovita 168 شوكولا  ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "كيلو", available: true },
+
+                      
+
+
+
+
+
+
+
         ],
         chips: [
-            ...Array(8).fill().map((_, i) => ({ name: `شبس فلة ${i+1}`, price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
-            ...["شيبس 250غ جبنة", "شيبس 250غ باربكيو", "شيبس 250غ ذرة حلوة", "شيبس 250غ بيتزا", "شيبس 250غ خضار"].map(name => ({ name, price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
-            ...Array(4).fill().map((_, i) => ({ name: `شيبس لاند ${i+1}`, price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true })),
-            ...Array(10).fill().map((_, i) => ({ name: `شيبس شاهين ${i+1}`, price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true }))
+                        { name: " فلة لون 250غ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " فلة لونين 250غ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " فلة براغي 250غ" , price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " فلة مثلثات 250غ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " فلة حد 250غ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " مكسرات صينية 250غ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                      
+                        { name: " شيبس جبنة 250غ", price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " شيبس باربكيو 250غ", price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " شيبس خضار 250غ", price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: " شيبس مشكل 250غ", price: 100, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+              { name: " شيبس  لاند طرابيش جبنة", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  لاند طرابيش خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  لاند شرائح جبنة", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  لاند شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+              { name: " شيبس  لاند شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  لاند شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  لاند شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },  
+              { name: " شيبس  لاند شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+             
+              { name: " شيبس  شاهين طرابيش خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  شاهين شرائح خضار", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  شاهين طرابيش جبنة", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  شاهين شرائح جبنة", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  شاهين طرابيش باربكيو", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+              { name: " شيبس  شاهين شرائح باربكيو", price: 300, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+
+
+
+            
+        
         ],
         canned:[
             { name: " فواكه مجففة 340غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
@@ -701,9 +893,24 @@
             { name: " صحن جيليبون 200غ ", price: 150, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " صحن جيليبون 300غ ", price: 200, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " صحن جيليبون 400غ ", price: 250, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " صحن دراجيه 200غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: " صحن دراجيه 200غ ", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
             { name: " صحن دراجيه 300غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
-            { name: " صحن دراجيه 400غ ", price: 600, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: " صحن دراجيه 400غ ", price: 750, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+          
+            { name: "   علبة فريز مبردة", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+            { name: "   علبة منجا مبردة", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+                        { name: "   تين وزبيب  وجوز", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   تين وزبيب  ومشمش", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "   تين وملبن  ", price: 350, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+                        { name: "      ملبن", price: 400, image: "https://images.unsplash.com/photo-1598977127919-6d61f3c6e6c8?q=80&w=2070&auto=format&fit=crop", unit: "قطعة", available: true },
+
+
+
+
+
+
+
         ]
     };
 
